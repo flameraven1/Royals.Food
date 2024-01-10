@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="login.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="index.html">
+    <link rel="icon" href="favicon.ico">
+    
+</head>
+<body>
+
+    <div>
+        
+        <div class="whole">
+            <a href="index.html"><img src="logohamza.png" alt="" width="250px" style="padding-left: 90px;"></a><br><br>
+        <form>
+
+            <h1>Login</h1>
+
+            <div class="input">
+
+                <input class="user" type="text" placeholder="Username" required id="username">
+                <i class="logo"><img src="bxs-user.svg" alt=""></i>
+
+            </div>
+
+            <div class="input">
+
+            <input class="user" type="password" placeholder="Password" required id="password">
+            <i class="logo"><img src="bxs-lock-alt.svg" alt=""></i>
+            
+
+
+            </div>
+
+
+            <div class="remember-forgot">
+
+                <label>
+                    <input type="checkbox" name="Remember me">
+                    Remember me
+                </label>
+
+                <a href="forgot-password.html">Forgot Password</a>
+
+            </div>
+
+
+            <button type="button" onclick="login()">Login</button>
+
+            <div class="register">
+
+                <p class="account">Don't have an account?
+                <a href="signup.html">Register</a>
+
+            </p>
+            </div>
+
+        </form>
+
+        </div>
+
+    </div>
+
+</body>
+
+<script>
+
+    function login()
+    {
+    var input1 = document.getElementById("username").value;
+    var input2 = document.getElementById("password").value;
+
+    if (input1 === "" || input2 === "") 
+    {
+        alert("Please fill in all the boxes.");
+    } else 
+    {
+        alert("You have successfully login!");
+        window.location.href = 'home1.html';  
+    }
+}
+
+</script>
+
+</html>

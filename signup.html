@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+    <link rel="stylesheet" href="signup.css">
+    <link rel="icon" href="favicon.ico">
+</head>
+<body>
+    <div class="signup-form">
+        <img src="user.png" alt="">
+        <h1>Sign Up Now</h1>
+        <form>
+            <input type="text" class="input-box" placeholder="First Name" required id="input1">
+            <input type="text" class="input-box" placeholder="Last Name" required id="input2">
+            <input type="email" class="input-box" placeholder="Email" required id="input3">
+            <input type="password" class="input-box" placeholder="Password" required id="input4">
+            <p class="agree"><span><input type="checkbox"></span>I agree to the terms of
+                services </p>
+
+            <button type="button" class="signup-button" onclick="signup()">Sign Up</button>
+            <hr>
+            <p>Do you have an account ? <a href="login.html">Login</a></p>
+
+        </form>
+    </div>
+</body>
+
+<script>
+    
+    function signup()
+    {
+    var input1 = document.getElementById("input1").value;
+    var input2 = document.getElementById("input2").value;
+    var input3 = document.getElementById("input3").value;
+    var input4 = document.getElementById("input4").value;
+    var checkbox = document.querySelector(".agree input");
+
+    if (input1 === "" || input2 === "" || input3 === "" || input4 === "" || !checkbox.checked) 
+    {
+        alert("Please fill in all the boxes and agree to the terms of services.");
+    } else 
+    {
+        alert("Your account has been successfully created!");
+        window.location.href = 'login.html';  
+    }
+}
+
+</script>
+
+</html>
